@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{%static 'css/upload_document.css'%}">
+
+
+<div class ="full-flex">
+<div class="dark-main">
+<h2>UPLOAD FILE</h2>
+<form method="post" enctype="multipart/form-data" class="form-wrapper">
+  {% csrf_token %} 
+
+  
+  {{ form|crispy }}
+ 
+  
+  <button type="submit" class="btn btn-primary btnn">Upload File</button>
+</form>
+</div>
+</div>
+<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+  Copyright &copy;
+  <span class="year"></span> WebDrive
+   </footer>
+{% endblock %}

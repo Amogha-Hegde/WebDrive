@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+
+<link rel="stylesheet" href="{%static 'css/document_list.css'%}">
+  
+  <div class="context">
+    <h1></h1>
+</div>
+
+
+<div class="area" >
+        <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+        </ul>
+
+
+
+
+<div class="back"><h2 class="danger"></h2>
+ 
+<div class="flex-container">
+  {% for document in documents %}
+ 
+ 
+ 
+
+    <div class="data">
+      <div class="logo-center">
+      <i class="fas fa-file-alt hck"></i>
+
+      </div>
+     
+      <div class="ul-wrapper"> 
+
+        <ul class="ul-main">
+          <li class="li-itmems">TITLE :{{ document.title }}</li>
+          <li class="li-itmems">NAME : {{ document.file.name }}</li>
+          <li class="li-itmems">SIZE : {{ document.file.size }} bytes</li>
+        </ul>
+      </div>
+       
+      
+        <a href="{{ document.file.url }}" class="btn btn-primary btn-sm btn-left" target="_blank">
+          Download File
+        </a>
+        <form class="hello" method="POST" action="{% url 'delete_document' document.pk %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+  
+    
+      
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</div >
+    
+
+<footer id="main-footer" class="py-4 bg-primary text-white text-center">
+  Copyright &copy;
+  <span class="year"></span> WebDrive
+   </footer>
+
+{% endblock %}
