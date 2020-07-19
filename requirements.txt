@@ -12,7 +12,7 @@ cryptography==2.9.2
 defusedxml==0.6.0
 diff-match-patch==20181111
 distlib==0.3.0
-Django==3.0.5
+Django==3.0.7
 django-appconf==1.0.3
 django-compress-field==0.10.1
 django-compressor==2.4
