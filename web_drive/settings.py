@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'web_drive.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'final',
+        'NAME':'webdrive',
         'USER':'postgres',
-        'PASSWORD':'9480053733',
+        'PASSWORD':'123456789',
         'HOST':'localhost',
     }
 }
