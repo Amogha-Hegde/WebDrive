@@ -46,7 +46,7 @@ pycparser==2.20
 pylint==2.4.4
 pylint-django==2.0.15
 pylint-plugin-utils==0.6
-PyPDF2==1.26.0
+PyPDF2==1.27.5
 pytz==2020.1
 PyYAML==5.3.1
 rcssmin==1.0.6
