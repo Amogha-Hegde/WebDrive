@@ -4,7 +4,7 @@ astroid==2.3.3
 autopep8==1.5
 Brotli==1.0.7
 camelcase==0.2
-certifi==2020.4.5.1
+certifi==2022.12.7
 cffi==1.14.0
 colorama==0.4.3
 coverage==5.1
